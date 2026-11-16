@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071411">
+  <meta name="description" content="kerido — приложение для Windows, которое берёт на себя повторяющиеся нажатия и клики. Настраивайте интервалы, распознавайте экран и управляйте сценариями горячими клавишами.">
+  <meta property="og:title" content="kerido — рутина на автопилоте">
+  <meta property="og:description" content="Автоматические нажатия, клики и распознавание экрана. Одно приложение для Windows, два режима: Lite и Boost.">
+  <meta property="og:type" content="website">
+  <title>kerido — рутина на автопилоте</title>
+  <link rel="icon" type="image/png" href="assets/kerido-brand.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Перейти к содержимому</a>
+  <header class="header">
+    <a class="brand" href="#" aria-label="kerido — главная"><img src="assets/kerido-brand.png" width="38" height="38" alt=""><span>kerido<span class="brand-dot">.</span></span></a>
+    <button class="menu-button" aria-expanded="false" aria-controls="navigation" aria-label="Открыть меню"><span></span><span></span></button>
+    <nav id="navigation" class="nav" aria-label="Основная навигация">
+      <a href="#features">Возможности</a><a href="#how">Как работает</a><a href="#plans">Lite и Boost</a><a href="#faq">Вопросы</a>
+    </nav>
+    <a href="#download" class="button button-small header-download">Скачать для Windows <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="status-dot"></span> ТВОЙ ПОМОЩНИК В АВТОМАТИЗАЦИИ</div>
+        <h1 id="hero-title">Твоя рутина.<br>Его <span class="gradient-text">забота.</span></h1>
+        <p class="hero-text">Одни и те же клавиши. Сотни одинаковых кликов. Передай повторяющиеся действия kerido — и настрой всё под свой ритм.</p>
+        <div class="hero-actions"><a class="button" href="downloads/kerido-2.1.3-setup-x64.exe" download>Скачать kerido <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></svg></a><a class="text-link" href="#features">Посмотреть возможности <span aria-hidden="true">↗</span></a></div>
+        <p class="download-note">Windows 10 / 11 · x64 · Lite бесплатно</p>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <span class="art-label label-top"><span class="status-dot"></span> kerido assistant</span>
+        <img class="mascot" src="assets/kerido-instructor.png" alt="Персонаж kerido — изумрудный кристалл с шарфом и светящимися глазами" width="1295" height="1192" fetchpriority="high">
+        <div class="floating-key key-one" aria-hidden="true">E</div><div class="floating-key key-two" aria-hidden="true">↵</div>
+        <div class="assistant-bubble"><span class="bubble-mark" aria-hidden="true">✦</span><span>Ты задаёшь правила.<br><strong>Я повторяю действия.</strong></span></div>
+      </div>
+      <div class="hero-bottom"><span>СДЕЛАНО ДЛЯ ТВОЕГО ПК</span><div><span>Нажатия</span><span>Клики</span><span>Распознавание</span><span>Сценарии</span></div><a href="#features" aria-label="К возможностям">↓</a></div>
+    </section>
+
+    <section class="features section wrap" id="features" aria-labelledby="features-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / ВОЗМОЖНОСТИ</p><h2 id="features-title">Меньше повторять.<br><span class="muted">Больше успевать.</span></h2></div><p>От простого клика до реакции на символы на экране. Выбери модуль и посмотри, как он устроен.</p></div>
+      <div class="feature-tabs" role="tablist" aria-label="Модули kerido">
+        <button id="tab-anti" role="tab" aria-selected="true" aria-controls="module-panel" tabindex="0" data-module="anti"><span class="tab-icon" aria-hidden="true">◷</span> Анти-АФК <small>Lite</small></button>
+        <button id="tab-clicker" role="tab" aria-selected="false" aria-controls="module-panel" tabindex="-1" data-module="clicker"><span class="tab-icon" aria-hidden="true">↖</span> Автокликер <small>Lite</small></button>
+        <button id="tab-scanner" role="tab" aria-selected="false" aria-controls="module-panel" tabindex="-1" data-module="scanner"><span class="tab-icon" aria-hidden="true">⌗</span> Экранный OCR <small>Boost</small></button>
+        <button id="tab-farm" role="tab" aria-selected="false" aria-controls="module-panel" tabindex="-1" data-module="farm"><span class="tab-icon" aria-hidden="true">⤨</span> АвтоФарм <small>Boost</small></button>
+      </div>
+      <div class="module" id="module-panel" role="tabpanel" aria-labelledby="tab-anti" tabindex="0">
+        <div class="module-copy"><span class="pill" id="module-tag">ВКЛЮЧЕНО В LITE</span><h3 id="module-title">Действия по твоему расписанию</h3><p id="module-description">Выбери клавиши и паузы между нажатиями. kerido будет выполнять периодические действия, пока ты занят другими делами.</p><ul class="check-list" id="module-points"><li>Свои клавиши, интервалы и длительность</li><li>Случайный выбор действия с повторами</li><li>Остановка по таймеру</li></ul><div class="module-tip"><span aria-hidden="true">↳</span><p id="module-example">Например, повторять разрешённое действие в приложении через заданный интервал.</p></div></div>
+        <figure class="app-preview"><div class="preview-top"><div class="window-dots"><i></i><i></i><i></i></div><span>kerido / Windows</span><span class="preview-version">v2.1.3</span></div><img id="module-image" src="assets/anti.png" alt="Реальный интерфейс модуля Анти-АФК: клавиши, интервалы, таймер и привязанное окно" width="1280" height="752" loading="lazy"><figcaption>Реальный интерфейс приложения. Совместимость ввода зависит от целевой программы.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="workflow section" id="how" aria-labelledby="how-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">02 / ВСЁ ПОД КОНТРОЛЕМ</p><h2 id="how-title">Настроил. Запустил.<br><span class="muted">Занялся своим.</span></h2></div><p>kerido работает на твоём компьютере: читает выбранную область экрана и отправляет нажатия клавиатуры или мыши.</p></div>
+      <div class="steps"><article><span class="step-number">01</span><div class="step-demo"><span class="selection-box"><b>Ab 123</b><i></i><i></i><i></i><i></i></span></div><h3>Выбери задачу</h3><p>Открой нужный модуль. Для OCR выдели область экрана, в которой появляются символы.</p></article><article><span class="step-number">02</span><div class="step-demo keys-demo"><kbd>E</kbd><span>через</span><span class="time-chip">2,5 сек</span></div><h3>Задай свой ритм</h3><p>Укажи клавиши, интервалы и условия. Время можно задавать в секундах или минутах.</p></article><article><span class="step-number">03</span><div class="step-demo"><span class="running"><span class="status-dot"></span> Сценарий выполняется</span></div><h3>Управляй на лету</h3><p>Запускай и останавливай модули горячими клавишами. Кнопка F10 останавливает автоматизацию.</p></article></div>
+      <div class="control-strip"><div class="control-icon" aria-hidden="true">⌘</div><div><h3>Приложение не должно мешать работе</h3><p>Мини-окно и оверлей оставляют управление под рукой. Встроенный помощник объясняет настройки каждого модуля.</p></div><div class="control-keys"><kbd>F10</kbd><span>остановить</span></div></div>
+    </div></section>
+
+    <section class="plans section wrap" id="plans" aria-labelledby="plans-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / ТВОЙ УРОВЕНЬ АВТОМАТИЗАЦИИ</p><h2 id="plans-title">Начни с Lite.<br><span class="gradient-text">Расширяй с Boost.</span></h2></div><p>Одно приложение и один аккаунт. Boost открывает дополнительные модули на выбранный срок.</p></div>
+      <div class="pricing-grid">
+        <article class="plan lite-plan"><div class="plan-top"><span class="plan-name">Lite</span><span class="pill">БАЗОВЫЙ РЕЖИМ</span></div><p class="plan-intro">Для привычных повторяющихся действий.</p><p class="price">0 <span>₽</span></p><p class="price-note">Бесплатно, без ограничения срока</p><a class="button button-secondary" href="downloads/kerido-2.1.3-setup-x64.exe" download>Скачать Lite <span aria-hidden="true">↓</span></a><ul class="check-list"><li>Анти-АФК с настройкой интервалов</li><li>Автокликер: переключение и удержание</li><li>Горячие клавиши и таймер остановки</li><li>Мини-окно и встроенный помощник</li></ul></article>
+        <article class="plan boost-plan"><div class="plan-top"><span class="plan-name">Boost <span aria-hidden="true">✦</span></span><span class="pill">БОЛЬШЕ ВОЗМОЖНОСТЕЙ</span></div><p class="plan-intro">Когда нужно реагировать на происходящее.</p><div class="periods" role="group" aria-label="Срок Boost"><button data-days="3" aria-pressed="false">3 дня</button><button data-days="7" aria-pressed="false">7 дней</button><button class="selected" data-days="30" aria-pressed="true">30 дней</button></div><div class="price-wrap" aria-live="polite"><p class="price"><span id="boost-price">400</span> <span>₽</span></p><p class="price-note" id="boost-duration">за 30 дней доступа</p></div><a class="button" id="boost-details" href="checkout.html?plan=boost_30d">Выбрать Boost <span aria-hidden="true">↗</span></a><ul class="check-list"><li>Все возможности Lite</li><li>Экранный OCR: буквы и цифры</li><li>АвтоФарм: повторяемые циклы действий</li><li>Распознавание экранных подсказок</li></ul></article>
+      </div>
+      <p class="payment-note"><span class="status-dot"></span> Приём оплат пока не открыт. Тарифы указаны для ознакомления. Автоматических списаний нет.</p>
+      <a class="subtle-link" href="documents.html#payment">Как будет предоставляться доступ и как обратиться за возвратом <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="faq-section section wrap" id="faq" aria-labelledby="faq-title"><div class="faq-heading"><p class="eyebrow">04 / БЕЗ ЛИШНИХ ВОПРОСОВ</p><h2 id="faq-title">Сначала<br><span class="muted">разберёмся.</span></h2><p>Не нашёл ответ?<br><a href="mailto:kerido.soft@gmail.com">Напиши нам <span aria-hidden="true">↗</span></a></p></div><div class="faq-list">
+      <details open><summary>Для чего нужен kerido?<span aria-hidden="true">+</span></summary><p>Для повторяемых действий на ПК: нажатий клавиш, кликов и реакции на символы в выбранной области экрана. Ты настраиваешь действие, время и горячие клавиши запуска. Применяй автоматизацию там, где это разрешено правилами используемой программы или сервиса.</p></details>
+      <details><summary>Чем Lite отличается от Boost?<span aria-hidden="true">+</span></summary><p>В Lite бесплатно доступны Анти-АФК и Автокликер. Boost дополнительно открывает Экранный OCR и АвтоФарм на 3, 7 или 30 дней. Отдельную версию приложения устанавливать не нужно.</p></details>
+      <details><summary>Как активируется Boost?<span aria-hidden="true">+</span></summary><p>Для Boost нужен аккаунт kerido с пятизначным ID. Доступ проверяется сервером и включается в том же приложении. Сейчас продажа подписок не запущена: платёжное подключение готовится, поэтому на сайте нет формы оплаты.</p></details>
+      <details><summary>Работает ли kerido в свёрнутом окне?<span aria-hidden="true">+</span></summary><p>Поведение зависит от программы и способа ввода. Некоторые приложения принимают только ввод в активном окне. Для распознавания выбранная область должна быть доступна для захвата; универсальная работа в полностью свёрнутом или перекрытом окне не гарантируется. Сначала проверь сценарий в своём приложении.</p></details>
+      <details><summary>Как остановить автоматизацию?<span aria-hidden="true">+</span></summary><p>Используй общую клавишу F10 или элементы управления в основном, мини-окне и оверлее. У автокликера есть собственная клавиша запуска — по умолчанию F6. В режиме удержания он работает, пока нажата назначенная клавиша.</p></details>
+      <details><summary>Что нужно для установки?<span aria-hidden="true">+</span></summary><p>Компьютер с Windows 10 или 11, 64-разрядная система. Установщик запросит права администратора. Для входа в аккаунт и проверки Boost требуется интернет. На этой странице доступна сборка 2.1.3.</p></details>
+    </div></section>
+
+    <section class="download-section wrap" id="download"><div class="download-card"><div class="download-orb" aria-hidden="true"></div><img src="assets/kerido-brand.png" alt="" width="76" height="76" loading="lazy"><p class="eyebrow">ТВОЙ СЛЕДУЮЩИЙ ШАГ</p><h2>Пусть рутина<br><span class="gradient-text">работает сама.</span></h2><p>Попробуй kerido Lite и настрой первый сценарий.</p><a class="button" href="downloads/kerido-2.1.3-setup-x64.exe" download>Скачать для Windows <span aria-hidden="true">↓</span></a><span class="download-note">Версия 2.1.3 · x64 · 7,6 МБ</span></div></section>
+  </main>
+
+  <footer class="footer wrap"><div class="footer-main"><a class="brand" href="#"><img src="assets/kerido-brand.png" width="34" height="34" alt=""><span>kerido<span class="brand-dot">.</span></span></a><p>Автоматизация в твоём ритме.<br><a href="mailto:kerido.soft@gmail.com">kerido.soft@gmail.com</a></p><div class="footer-links"><a href="documents.html#offer">Условия использования и покупки</a><a href="documents.html#privacy">Конфиденциальность</a><a href="documents.html#payment">Предоставление доступа и возврат</a><a href="documents.html#contacts">Контакты и реквизиты</a></div></div><div class="footer-bottom"><span>© 2026 kerido soft</span><span>Сделано для Windows. Настроено под тебя.</span></div></footer>
+
+</body>
+</html>

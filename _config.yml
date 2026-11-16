@@ -1,0 +1,9 @@
+# GitHub Pages hosts only the non-commercial project information page.
+# The full landing / Boost checkout is deployed separately from dist/.
+exclude:
+  - dist
+  - README.md
+  - QA.md
+  - PAYMENT-HANDOFF.md
+  - kerido-website.zip
+  - qa
